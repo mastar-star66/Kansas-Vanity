@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050510"/>
+      <stop offset="100%" stop-color="#0a0a28"/>
+    </linearGradient>
+    <linearGradient id="plate-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111118"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="url(#bg)"/>
+
+  <!-- Grid lines -->
+  <g opacity="0.08" stroke="#00f5ff" stroke-width="1">
+    <line x1="0" y1="64" x2="512" y2="64"/>
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="192" x2="512" y2="192"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="320" x2="512" y2="320"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
+    <line x1="0" y1="448" x2="512" y2="448"/>
+    <line x1="64" y1="0" x2="64" y2="512"/>
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="192" y1="0" x2="192" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="320" y1="0" x2="320" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+    <line x1="448" y1="0" x2="448" y2="512"/>
+  </g>
+
+  <!-- License plate shape -->
+  <rect x="56" y="156" width="400" height="200" rx="22" fill="url(#plate-bg)" stroke="#5a4000" stroke-width="4"/>
+  <rect x="64" y="164" width="384" height="184" rx="16" fill="none" stroke="#3a2800" stroke-width="1.5"/>
+
+  <!-- Bolt holes -->
+  <circle cx="96" cy="256" r="10" fill="#0a0a20" stroke="#3a2800" stroke-width="2"/>
+  <circle cx="416" cy="256" r="10" fill="#0a0a20" stroke="#3a2800" stroke-width="2"/>
+
+  <!-- KS text — cyan glow -->
+  <text x="256" y="290" text-anchor="middle"
+    font-family="'Courier New', monospace" font-size="130" font-weight="900"
+    fill="#00f5ff" filter="url(#glow2)" letter-spacing="8">KS</text>
+
+  <!-- Scanline overlay -->
+  <rect x="56" y="156" width="400" height="200" rx="22" fill="none"
+    stroke="rgba(0,245,255,0.15)" stroke-width="1"/>
+
+  <!-- Bottom accent line -->
+  <rect x="80" y="388" width="352" height="2" rx="1" fill="#00f5ff" opacity="0.3"/>
+
+  <!-- VANITY label -->
+  <text x="256" y="430" text-anchor="middle"
+    font-family="'Courier New', monospace" font-size="28" font-weight="700"
+    fill="#ff00dd" filter="url(#glow)" letter-spacing="10">VANITY</text>
+
+  <!-- Corner accent dots -->
+  <circle cx="80" cy="80" r="4" fill="#00f5ff" opacity="0.4"/>
+  <circle cx="432" cy="80" r="4" fill="#00f5ff" opacity="0.4"/>
+  <circle cx="80" cy="432" r="4" fill="#ff00dd" opacity="0.4"/>
+  <circle cx="432" cy="432" r="4" fill="#ff00dd" opacity="0.4"/>
+</svg>
